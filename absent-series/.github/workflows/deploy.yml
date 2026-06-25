@@ -46,7 +46,21 @@ jobs:
           fi
 
       - name: Deploy to gh-pages
+        # If no external publish token is provided, publish to this repo's gh-pages using GITHUB_TOKEN
         uses: peaceiris/actions-gh-pages@v4
+        if: ${{ secrets.PUBLISH_TOKEN == '' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ steps.publishdir.outputs.dir }}
+
+      - name: Deploy to external repo (if configured)
+        # When you want to publish to a different repository (e.g. username.github.io),
+        # set repository secret PUBLISH_TOKEN (a PAT with `repo` scope) and TARGET_REPO (owner/repo).
+        # This step will run only when PUBLISH_TOKEN is present.
+        if: ${{ secrets.PUBLISH_TOKEN != '' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: ${{ steps.publishdir.outputs.dir }}
+          repository-name: ${{ secrets.TARGET_REPO }}
+          token: ${{ secrets.PUBLISH_TOKEN }}

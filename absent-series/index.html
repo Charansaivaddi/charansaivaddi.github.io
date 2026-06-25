@@ -1,235 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Charan Sai Vaddi | Portfolio</title>
+        <title> Portfolio </title>
         <style>
-            :root {
-                color-scheme: light;
-                --bg: #f5efe6;
-                --panel: rgba(255, 255, 255, 0.78);
-                --text: #1f1b17;
-                --muted: #665b52;
-                --accent: #965b5b;
-                --border: rgba(31, 27, 23, 0.12);
-                --shadow: 0 18px 60px rgba(71, 48, 38, 0.14);
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                font-family: Georgia, "Times New Roman", serif;
-                color: var(--text);
-                background:
-                    radial-gradient(circle at top left, rgba(150, 91, 91, 0.16), transparent 30%),
-                    radial-gradient(circle at bottom right, rgba(101, 74, 49, 0.12), transparent 35%),
-                    var(--bg);
-                min-height: 100vh;
-            }
-
-            a {
-                color: var(--accent);
-            }
-
-            .page {
-                max-width: 1100px;
-                margin: 0 auto;
-                padding: 32px 20px 56px;
-            }
-
-            .hero {
-                display: grid;
-                grid-template-columns: 240px 1fr;
-                gap: 28px;
+            .profile-layout {
+                display: flex;
                 align-items: center;
-                padding: 28px;
-                border: 1px solid var(--border);
-                border-radius: 28px;
-                background: var(--panel);
-                box-shadow: var(--shadow);
-                backdrop-filter: blur(14px);
+                gap: 30px;
+                max-width: 800px;
+                margin: 40px auto;
             }
-
             .profile-pic {
-                width: 100%;
-                max-width: 240px;
-                border-radius: 24px;
-                display: block;
-                box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+                max-width: 200px;
+                height: auto;
+                /* border-radius: 10px; */
             }
-
-            .eyebrow {
-                margin: 0 0 10px;
-                text-transform: uppercase;
-                letter-spacing: 0.16em;
-                font-size: 0.8rem;
-                color: var(--muted);
-            }
-
-            h1 {
-                margin: 0;
-                font-size: clamp(2.2rem, 5vw, 4.2rem);
-                line-height: 0.95;
-            }
-
-            .preferred {
-                margin: 14px 0 0;
-                font-size: 1.05rem;
-                color: var(--muted);
-            }
-
-            .summary {
-                margin: 18px 0 0;
-                max-width: 68ch;
-                line-height: 1.7;
-                font-size: 1.02rem;
-            }
-
-            .section {
-                margin-top: 34px;
-                padding: 28px;
-                border: 1px solid var(--border);
-                border-radius: 24px;
-                background: rgba(255, 255, 255, 0.62);
-                box-shadow: var(--shadow);
-            }
-
-            .section h2 {
-                margin: 0 0 18px;
-                font-size: 1.4rem;
-            }
-
-            .timeline {
-                border-left: 2px solid var(--accent);
-                padding-left: 24px;
-                margin-left: 8px;
-            }
-
-            .timeline-item {
-                position: relative;
-                margin-bottom: 26px;
-            }
-
-            .timeline-item:last-child {
-                margin-bottom: 0;
-            }
-
-            .timeline-dot {
-                position: absolute;
-                left: -32px;
-                top: 6px;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: var(--accent);
-                box-shadow: 0 0 0 4px rgba(150, 91, 91, 0.12);
-            }
-
-            .timeline-date {
-                margin: 0 0 6px;
-                font-size: 0.9rem;
-                font-weight: 700;
-                color: var(--muted);
-            }
-
-            .timeline-content h3 {
-                margin: 0 0 6px;
-                font-size: 1.08rem;
-            }
-
-            .timeline-content p {
-                margin: 0;
-                line-height: 1.6;
-                color: #4a4039;
-            }
-
-            .footer-note {
-                margin-top: 18px;
-                color: var(--muted);
-                font-size: 0.95rem;
-            }
-
-            @media (max-width: 760px) {
-                .page {
-                    padding: 16px;
-                }
-
-                .hero {
-                    grid-template-columns: 1fr;
-                    padding: 20px;
-                }
-
-                .profile-pic {
-                    max-width: 180px;
-                }
-
-                .section {
-                    padding: 20px;
-                }
-            }
+        .text-section{
+            display: block;
+        }
+            .timeline-section {
+            max-width: 900px;
+            margin: 60px auto 40px auto;
+        }
+        .timeline-header {
+            /* margin-bottom: 30px; */
+            /* font-size: 1.5rem; */
+            text-align: center;
+        }
+        .timeline {
+            border-left: 2px solid rgb(150, 91, 91);
+            padding-left: 30px;
+            margin: 0 20px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -37px; /* Mathematically centers the dot on the border */
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: rgb(150, 91, 91);
+            border-radius: 50%;
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .timeline-content h3 {
+            margin: 0 0 5px 0;
+            /* font-size: 1.1rem; */
+        }
+        .timeline-content p {
+            margin: 0;
+            line-height: 1.5;
+            color: #444;
+        }
         </style>
     </head>
-    <body>
-        <main class="page">
-            <section class="hero">
-                <img src="profile_image.jpg" alt="Charan Sai Vaddi profile photo" class="profile-pic">
-
-                <div>
-                    <p class="eyebrow">Portfolio</p>
-                    <h1>Charan Sai Vaddi</h1>
-                    <p class="preferred">Preferred name: <strong>Charan Sai Vaddi</strong></p>
-                    <p class="summary">
-                        I graduated in Computer Science from PES University with a 9.09 CGPA. My research and development experience includes internships at the Center for Data Science and Applied Machine Learning (PES University), participation in the IBM GRM Mentorship program, and work with Microsoft M365 Research.
-                    </p>
+    <body> 
+        <div style="text-align: center;">
+            <b> Vaddi Charan Sai Nandan Reddy</b>
+            <!-- <p> TL;DR <b> Charan Sai Vaddi </b> </p> -->
+            <p>Preferred: <strong>Charan Sai Vaddi</strong></p>
+        </div>
+        
+        <div class="profile-layout">
+            <img src="profile_image.jpg" alt="Charan's profile pic" class="profile-pic">
+            <!-- <p>
+                I am a recent graduate from PES University from the Department of Computer Science Engineering. <i> Cavins cold coffee </i> backed all nighters during ISA/ESA weeks rewarded me with 9.09 CGPA &lt;pops&gt;.
+                Notable achievements at Uni - Founded <a href="https://www.linkedin.com/company/gron-it-pes/">GronIT</a> and successfully waived off 40 % of semester fees via MRD Scholarship for 5 of 6 semesters props to PESU 🐐 for this.
+                As if this drama wasn't enough, I interned at <a href="https://research.pes.edu/centre/centre-for-data-science-and-applied-machine-learn/">Center for Data Science and Applied Machine Learning, PES University </a> where I worked under <a href="https://staff.pes.edu/nm1155/">Prof. Chitra G M,</a> later at IBM via GRM Mentorship program and currently at <a href="https://www.microsoft.com/en-us/research/group/m365-research/">Microsoft M365 Research.</a>
+            </p> -->
+            <div class="text-section">
+            <p>I graduated in Computer Science from PES University with a 9.09 CGPA. My research and development experience includes internships at the Center for Data Science and Applied Machine Learning (PES University), participation in the IBM GRM Mentorship program, and work with Microsoft M365 Research.</p>
+        
+        <div class="timeline-section">
+        <h2 class="timeline-header">Experience & Achievements</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Present</div>
+                <div class="timeline-content">
+                    <h3>Research Intern @ Microsoft M365 Research</h3>
+                    <p></p>
                 </div>
-            </section>
+            </div>
 
-            <section class="section">
-                <h2>Experience &amp; Achievements</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Present</div>
-                        <div class="timeline-content">
-                            <h3>Research Intern @ Microsoft M365 Research</h3>
-                            <p>Working on research-driven product and systems problems.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">June 2025 - July 2025</div>
-                        <div class="timeline-content">
-                            <h3>Intern @ IBM</h3>
-                            <p>Part of the IBM GRM Mentorship program.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">June 2024 - July 2024</div>
-                        <div class="timeline-content">
-                            <h3>Intern @ Center for Data Science and Applied Machine Learning</h3>
-                            <p>Conducted research on classifying various Indian stitches under the guidance of Prof. Chitra G. M.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Sep 2022</div>
-                        <div class="timeline-content">
-                            <h3>Joined B.Tech in Computer Science Engineering at PES University</h3>
-                            <p>Started undergraduate studies and built the base for the portfolio above.</p>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">June 2025 - July 2025</div>
+                <div class="timeline-content">
+                    <h3>Intern @ IBM</h3>
+                    <p>Part of IBM GRM Mentorship program.</p>
                 </div>
+            </div>
 
-                <p class="footer-note">To host this page, keep it as <strong>index.html</strong> inside <strong>absent-series</strong>.</p>
-            </section>
-        </main>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">June 2024 - July 2024</div>
+                <div class="timeline-content">
+                    <h3>Intern @ Center for Data Science and Applied Machine Learning</h3>
+                    <p>Conducted research on classifying various indian stitches under the guidance of Prof. Chitra G M.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 2022</div>
+                <div class="timeline-content">
+                    <h3>Joined B.Tech in Computer Science Engineering at PES University.</h3>
+                    <!-- <p>Founded the GronIT initiative and secured the MRD Scholarship, successfully waiving 40% of semester fees for 5 semesters.</p> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    </div>
     </body>
 </html>

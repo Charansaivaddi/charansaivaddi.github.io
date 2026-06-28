@@ -2,6 +2,9 @@
     <head>
         <title> Portfolio </title>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
             .profile-layout {
                 display: flex;
                 align-items: flex-start;
@@ -19,7 +22,7 @@
             .about-me {
                 margin-bottom: 30px;
             }
-            .text-section h3, .resume-section h3 {
+            .text-section h3, .resume-section h3, .experience h3{
                 border-bottom: 1px solid #ccc;
                 padding-bottom: 8px;
                 margin-bottom: 20px;
@@ -37,7 +40,7 @@
             .resume-link {
                 margin-top: 0.6rem;
             }
-            .resume-section {
+            .resume-section, .experience {
                 max-width: 800px;
                 margin: 40px auto;
                 padding: 0 20px;
@@ -55,20 +58,31 @@
                 font-size: 1.1rem;
             }
             .resume-date {
-                color: #555;
                 font-size: 0.95rem;
                 white-space: nowrap;
             }
             .resume-company {
                 font-size: 1rem;
-                color: #333;
+            }
+            .tabs{
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
             }
         </style>
     </head>
     <body> 
         <div style="text-align: center;">
-            <p><b> Vaddi Charan Sai Nandan Reddy</b><br>
+            <p><b>Vaddi Charan Sai Nandan Reddy</b><br>
             Research Intern @ Microsoft</p>
+        </div>
+
+        <div class="tabs">
+            <a href="#about-me" class="tab-item">About Me</a>
+            <a href="#publications" class="tab-item">Publications</a>
+            <a href="#experience" class="tab-item">Experience</a>
+            <a href="blog.html" class="tab-item">Blogs</a>
+            <a href></a>
         </div>
         
         <div class="profile-layout">
@@ -82,13 +96,13 @@
                 </div>
             </div>
             <div class="text-section">
-                <div class="about-me">
+                <div class="about-me" id="about-me">
                     <h3>About Me</h3>
                     <p>I graduated in Computer Science from PES University with 9.09 CGPA and am currently a Research Intern at <a href="https://www.microsoft.com/en-us/research/group/m365-research/">Microsoft M365 Research</a>.</p>
                     <p>My work focuses on efficient LLM Systems, particularly compute-serving system co-design and I am currently exploring SM-Level P/D Disaggregation to a great extent. Apart from that, personally I work towards efficient MoE serving</p>
                     <p>I also enjoy exploring Test-Time Scaling, Mechanistic Interpretability.</p>
                 </div>
-                <div class="publications">
+                <div class="publications" id="publications">
                     <h3>Publications</h3>
                     <p><b>Laghu</b> Localization of RL-Induced Reasoning in Small Language Models
                     <br>Accepted @ FLINS-ISKE 2026</p>
@@ -100,31 +114,41 @@
             </div>
         </div>
 
-        <div class="resume-section">
+        <!-- <div class="resume-section" id="resume-section">
             <h3>Experience</h3>
             
             <div class="resume-item">
+                <div class="resume-company"><strong>Microsoft</strong></div>
                 <div class="resume-header">
                     <span class="resume-title">Research Intern</span>
                     <span class="resume-date">Jan 2026 - July 2026</span>
                 </div>
-                <div class="resume-company"><strong>Microsoft</strong></div>
             </div>
 
             <div class="resume-item">
+                <div class="resume-company"><strong>IBM</strong></div>
                 <div class="resume-header">
                     <span class="resume-title">GRM Mentee</span>
                     <span class="resume-date">June 2025 - July 2025</span>
                 </div>
-                <div class="resume-company"><strong>IBM</strong></div>
+
             </div>
 
             <div class="resume-item">
+                <div class="resume-company"><strong>Center for Data Science and Applied Machine Learning, PES University</strong></div>
                 <div class="resume-header">
                     <span class="resume-title">Research Intern</span>
                     <span class="resume-date">June 2024 - July 2024</span>
                 </div>
-                <div class="resume-company"><strong>Center for Data Science and Applied Machine Learning, PES University</strong></div>
+            </div>
+        </div> -->
+        <div class="experience" id="experience">
+            <h3>Experience</h3>
+            <div class="exp-item">
+                Research Intern @ <strong>Microsoft</strong> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Jan 2026 - July 2026
+            </div>
+            <div class="exp-item">
+                GRM Mentee - Open Source Contributor @ <strong>IBM</strong>&emsp; &emsp; &emsp;June 2026 - July 2026
             </div>
         </div>
 
